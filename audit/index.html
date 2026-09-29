@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="description" content="Local partner-introduced bottleneck audit clipboard for Thomas.">
+<title>Partner Audit | FGAI clipboard</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+<div class="workspace">
+<header><div><p class="eyebrow">FOREVER GOLD AI / THOMAS ONLY</p><h1>Partner Audit<span>Free bottleneck audit. Shop clipboard.</span></h1></div><a href="../" target="_blank" rel="noopener">Offer ↗</a></header>
+<div class="status-row"><span id="save-status" role="status">Local draft. Nothing sent.</span><span id="baseline-state">Before number: UNCONFIRMED</span><span id="terms-state">Partner fee: [THOMAS APPROVES]</span></div>
+<p id="storage-error" class="warning" role="alert" hidden></p>
+<noscript><p class="warning">JavaScript is off. Use partner-research-template.md and the runbook to record the audit by hand. The buttons need JavaScript.</p></noscript>
+<nav class="steps" aria-label="Audit sections">
+<button type="button" data-step="0" aria-current="step">01 <span>The intro</span><small>0–5 min</small></button>
+<button type="button" data-step="1">02 <span>First clog</span><small>5–25 min</small></button>
+<button type="button" data-step="2">03 <span>One number</span><small>25–40 min</small></button>
+<button type="button" data-step="3">04 <span>Verdict</span><small>40–60 min</small></button>
+</nav>
+<main class="board">
+<form id="audit-form" novalidate autocomplete="off">
+<p class="required-note">All fields required for export unless marked optional. Use UNCONFIRMED for an unknown baseline. Use “None” for flags or notes with nothing to add.</p>
+
+<section data-panel="0" aria-labelledby="intro-heading">
+<h2 id="intro-heading" tabindex="-1">Who sent you, and what were they told?</h2><p class="cue">Thank the partner out loud if they are on the line. Tell the owner this is a diagnosis, not a pitch.</p>
+<div class="grid"><label>Date / time<input type="datetime-local" name="date" required></label><label>Partner name <span class="opt">optional</span><input name="partner" maxlength="100" aria-describedby="partner-help"></label></div>
+<p id="partner-help" class="helper">Blank is allowed and exports as UNCONFIRMED. Never type a partner you have not actually spoken to.</p>
+<label>Partner type<select name="partner_type" required><option value="">Choose partner type</option><option>Bookkeeper / CPA for trade shops</option><option>Commercial insurance agent</option><option>Auto parts jobber / parts counter</option><option>Shop landlord / industrial park</option><option>Detailer who refers mechanical work</option><option>Coatings supplier / distributor</option><option>Local web designer</option><option>Marketing shop running ads</option><option>Business coach / SBDC counselor</option><option>Event venue / planner</option><option>Other</option></select></label>
+<div class="grid"><label>Client business name<input name="client" maxlength="100" required></label><label>Owner name<input name="owner" maxlength="80" required></label></div>
+<label>Trade<select name="trade" required><option value="">Choose trade</option><option>mechanic</option><option>coater</option><option>mover</option><option>detailer</option><option>cleaner</option><option>handyman</option><option>event crew</option><option>Other</option></select></label>
+<label>Why the partner introduced us<textarea name="why_intro" maxlength="4000" rows="3" required></textarea></label>
+<label>What the client was promised<input name="promised" value="Free bottleneck audit. No price." maxlength="200" required aria-describedby="promised-help"></label><p id="promised-help" class="helper">The audit is free. No build, no install, and no dollar figure was promised to get this meeting.</p>
+<label>Commercial terms<input name="terms" value="[THOMAS APPROVES]" maxlength="120" required aria-describedby="terms-help"></label><p id="terms-help" class="helper">Thomas writes the partner fee before anyone is promised money. A percentage or revenue share cannot be entered here. No split is FGAI's term until he writes one.</p>
+</section>
+
+<section data-panel="1" hidden aria-labelledby="clog-heading">
+<h2 id="clog-heading" tabindex="-1">Find the first clog.</h2><p class="cue">Ask why they took the intro. Then stop talking. Let the real pain come out.</p>
+<label>Why they took the intro<textarea name="why_took" maxlength="4000" rows="4" required></textarea></label>
+<p class="question">If tomorrow you got 300 jobs that wanted your services, what process would break <em>first</em>?</p>
+<label>300-jobs answer<textarea name="three_hundred" maxlength="4000" rows="5" required></textarea></label>
+<label>First process that breaks<input name="clog" maxlength="160" required></label>
+<p class="helper">Examples, not diagnoses: missed calls, no follow-up, night invoicing. If labor breaks first, say “This is not an AI job.”</p>
+<label>Why this comes first<input name="why_first" maxlength="200" required></label>
+<label>Pipe<select name="pipe" required><option value="">Choose one pipe</option><option>Demand</option><option>Supply</option><option>Not AI / hire-first</option></select></label>
+<label>Current state <span class="opt">optional</span><textarea name="extras" maxlength="4000" rows="3" placeholder="Where work waits. Where calls fall through. Which task creates rework."></textarea></label>
+</section>
+
+<section data-panel="2" hidden aria-labelledby="kpi-heading">
+<h2 id="kpi-heading" tabindex="-1">What number proves this worked?</h2><p class="cue">“If this is working perfectly in 30 days, what number do you want to see?”</p>
+<label>KPI name<input name="kpi" maxlength="140" required aria-describedby="kpi-help"></label><p id="kpi-help" class="helper">Include unit and time window. Examples: same-day invoices per week; minutes to first follow-up.</p>
+<div class="grid"><label>KPI baseline<input name="baseline" value="UNCONFIRMED" maxlength="40" required aria-describedby="baseline-help"></label><label>KPI target<input name="target" type="number" step="any" min="0" required></label></div>
+<p id="baseline-help" class="warning">Unknown baseline = UNCONFIRMED, never zero. Count this week. Put who counts, the source, and a review date in Open flags.</p>
+<label>Proposed 30-day outcome<input name="outcome_30" maxlength="200" required></label>
+<fieldset><legend>ROI fields <span class="opt">optional, blank allowed</span></legend>
+<div class="grid quad"><label>Minutes per case<input name="minutes_per_case" type="number" step="any" min="0"></label><label>Cases per month<input name="cases_per_month" type="number" step="any" min="0"></label><label>Error / rework rate<input name="error_rate" maxlength="40"></label><label>Lead response time<input name="lead_response" maxlength="40"></label><label>Missed calls / leads<input name="missed_calls" maxlength="40"></label></div>
+<p class="helper">Same labels as roi-scorecard.md. A blank value is better than a fabricated one. Re-measure the same fields at day 7 and day 30.</p></fieldset>
+<fieldset><legend>Opportunity filter</legend>
+<div class="grid"><label>Pain is frequent and measurable<select name="f_frequent" required><option value="">Choose</option><option>Yes</option><option>No</option></select></label><label>A safe automation can improve it<select name="f_safe" required><option value="">Choose</option><option>Yes</option><option>No</option></select></label><label>Required data and permissions exist<select name="f_data" required><option value="">Choose</option><option>Yes</option><option>No</option></select></label><label>The outcome matters enough to fund<select name="f_fund" required><option value="">Choose</option><option>Yes</option><option>No</option></select></label><label>A small proof-of-concept can validate it<select name="f_poc" required><option value="">Choose</option><option>Yes</option><option>No</option></select></label></div>
+<p class="helper">Any No means do not force a build. Return the useful diagnosis and close the audit cleanly. The partner still looks useful.</p></fieldset>
+</section>
+
+<section data-panel="3" hidden aria-labelledby="verdict-heading">
+<h2 id="verdict-heading" tabindex="-1">Two options.</h2><p class="cue">Read back the clog, the baseline, the target, and the V1. Then give them a binary choice.</p>
+<label>Verdict<select name="verdict" required><option value="">Choose verdict</option><option>Build</option><option>Defer</option><option>No-fit</option></select></label>
+<label>Smallest valid proof-of-concept<input name="poc" maxlength="200" required aria-describedby="poc-help"></label><p id="poc-help" class="helper">Use “None” if the verdict is No-fit. Scope the smallest thing that tests the KPI, not the whole ladder.</p>
+<label>Recommended V1<select name="v1" required><option value="">Choose only after the diagnosis</option><option>AI Receptionist + Speed-to-Lead</option><option>Website</option><option>Premium 3D Website</option><option>Same-day close-out / invoicing (theme only)</option><option>Document processing (paperwork → draft)</option><option>Content Engine (short-form monthly)</option><option>Employee onboarding (first-week checklist)</option><option>AIOS</option><option>Not AI — hire or operations</option><option>Hold — need the paid Diagnosis Hour</option></select></label>
+<label>Next step<select name="next" required><option value="">Choose next step</option><option>Partner recap only</option><option>Diagnosis Hour</option><option>Proposal on named V1</option><option>Not ready</option></select></label>
+<div class="grid"><label>Open flags<textarea name="flags" rows="4" maxlength="4000" required></textarea></label><label>Thomas notes<textarea name="notes" rows="4" maxlength="6000" required></textarea></label></div>
+<p class="helper">Open flags carry dependencies and risks: who counts the baseline, the source, the review date, who must approve a change. Notes carry measurement source, units, and agreed scope.</p>
+<details><summary>Locked price reminder · internal reference</summary><div class="price-reference">
+<p>AI Receptionist: $1,000 build + $200/month.</p><p>Website: $500 build + $50/month.</p><p>Premium 3D Website: $1,200–$2,000 build + $100–$150/month.</p><p>AIOS: $2,500–$5,000 setup + $500–$1,500/month.</p><p>STORM: $100/automation/month, flat, all-in. Build-fee synthesis: $800 single / $2,000 three-bundle, phased.</p><p>The audit is free. The V1 uses the locked sheet. Cut scope, do not discount. Do not invent a smaller price on the call.</p><p><strong>Partner fee: none exists until Thomas writes it.</strong> No percentage. No revenue share. No lead bonus.</p>
+<p><a href="https://thomasg42.github.io/diagnosis-hour/">Diagnosis Hour</a> · <a href="https://thomasg42.github.io/diagnosis-hour/">Paid hour</a></p>
+</div></details>
+</section>
+
+<div class="page-controls"><button id="previous" type="button">← Previous</button><span id="page-count">1 / 4</span><button id="continue" type="button">Next →</button></div>
+</form>
+<aside aria-label="Audit recap" class="recap-card"><p class="eyebrow">READ BACK AT THE CLOSE</p><h2 id="recap-client">This audit</h2><dl><dt>Introduced by</dt><dd id="recap-partner">UNCONFIRMED</dd><dt>Pipe</dt><dd data-recap="pipe">Not recorded</dd><dt>First process that breaks</dt><dd data-recap="clog">Not recorded</dd><dt>One KPI</dt><dd data-recap="kpi">Not recorded</dd><dt>Baseline → target</dt><dd id="recap-numbers">UNCONFIRMED → Not recorded</dd><dt>Verdict</dt><dd data-recap="verdict">Not recorded</dd><dt>Recommended V1</dt><dd data-recap="v1">Not recorded</dd><dt>Next step</dt><dd data-recap="next">Not recorded</dd></dl><p class="helper">A target is not proof. No after number exists yet. The partner fee stays Thomas's to write.</p></aside>
+</main>
+<footer class="actions"><button id="new" type="button" class="quiet">New audit</button><button id="copy" type="button">Copy markdown</button><button id="print" type="button">Print recap</button><button id="export" type="button" class="primary">Export markdown ↓</button></footer>
+<p id="action-status" role="status">Local only. Export a file after each audit. This browser holds one draft.</p>
+</div>
+<section id="print-recap" aria-label="Printable recap"><p>FOREVER GOLD AI / BOTTLENECK AUDIT</p><h1 id="print-client"></h1><p id="print-owner"></p><dl id="print-details"></dl><p>Target agreed for review. Results have not yet been measured. This audit was free. Any build is a separate quote.</p><p>thomasg@forevergoldai.com</p></section>
+<dialog id="copy-dialog"><h2>Copy the audit markdown</h2><p>Clipboard access is unavailable. Select this text and copy it.</p><textarea id="copy-fallback" rows="14" readonly aria-label="Audit markdown"></textarea><button id="copy-close" type="button">Close</button></dialog>
+</body></html>
